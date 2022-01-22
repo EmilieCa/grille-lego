@@ -47,24 +47,24 @@ html {
 
 ::-webkit-scrollbar {
     width: 1em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #dee5e7;
+  border-radius: 100vw;
+  margin-block: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: variables.$couleur_bleu_fonce;
+  border: .15em solid #dee5e7;
+  border-radius: 100vw;
+}
+
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color:  variables.$couleur_bleu_fonce #dee5e7;
+    scrollbar-width: thin;
   }
-  
-  ::-webkit-scrollbar-track {
-    background-color: #dee5e7;
-    border-radius: 100vw;
-    margin-block: .5em;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: variables.$couleur_bleu_fonce;
-    border: .15em solid #dee5e7;
-    border-radius: 100vw;
-  }
-  
-  @supports (scrollbar-color: red blue) {
-    * {
-      scrollbar-color:  variables.$couleur_bleu_fonce #dee5e7;
-      scrollbar-width: thin;
-    }
-  }
+}
 
