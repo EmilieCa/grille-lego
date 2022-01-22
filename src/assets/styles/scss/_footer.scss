@@ -1,0 +1,248 @@
+@use 'variables';
+
+footer {
+    grid-area: 3 / 1 / 4 / 13 ;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, auto);
+    background-color: variables.$couleur_bleu_pale;
+    color: variables.$couleur_bleu_fonce;
+    margin-top: 10px;
+    padding-top: 25px;
+
+    .logo_region_cadeaux {
+        grid-area: 1 / 1 / 3 / 6 ;
+        height: 194px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        
+        @media #{variables.$medium-plus} {
+            grid-area: 1 / 1 / 8 / 5 ;
+            align-self: flex-start;
+        }
+
+        .background_image {
+            height: 97px;
+            width: 97px;
+            margin-bottom: 15px;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        div {
+            margin-bottom: 5px;
+            
+            .pays {
+                width: 250px;
+            }
+        }
+
+        .carte_cadeau {
+            font-size: .8rem;
+            padding-left: 15px;
+        }
+    }
+
+    .souscrire {
+        grid-area: 3 / 1 / 5 / 13 ;
+        height: 130px;
+        display: flex;
+        align-items: flex-end;
+        margin: 15px;
+
+        .courriel {
+            width: 350px;
+        }
+
+        @media #{variables.$medium-plus} {
+            grid-area: 9 / 1 / 10 / 5 ;
+        }
+    }
+
+    .accordeon {
+        display: block;
+        grid-area: 5 / 1 / 7 / 13 ;
+
+        .row {
+
+            .accordion {
+
+                .accordion-item {
+
+                    .accordion-header {
+                        
+                        button {
+                            background-color: variables.$couleur_bleu_pale;
+                            color: variables.$couleur_bleu_fonce;
+                            margin: 0;
+                        }
+                    }
+
+                    div {
+
+                        .accordion-body {
+                            background-color: variables.$couleur_bleu_fonce;
+
+                            ul {
+
+                                li {
+                                    
+                                    a {
+                                        color: variables.$couleur_bleu_pale;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media #{variables.$medium-plus} {
+            display: none;
+        }
+    }
+
+    .menu_footer_bureau {
+        display: none;
+
+        @media #{variables.$medium-plus} {
+            display: block;
+            grid-area: 1 / 6 / 8 / 13 ;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, auto);
+        }
+
+        @media #{variables.$large-plus} {
+            grid-area: 1 / 4 / 8 / 13 ;
+        }
+
+        section {
+            padding: 15px;
+
+            h2 {
+                font-size: 1.1rem;
+                font-weight: 600;
+            }
+
+            ul {
+                font-size: .9rem;
+
+                li {
+
+                    a {
+                        color: variables.$couleur_bleu_fonce;
+                    }
+                }
+            }
+        }
+
+        .propos {
+            grid-area: 1 / 1 / 7 / 7 ;
+
+            @media #{variables.$large-plus} {
+                grid-area: 1 / 1 / 8 / 4 ;
+            }
+        }
+
+        .cours {
+            grid-area: 1 / 7 / 7 / 13 ;
+
+            @media #{variables.$large-plus} {
+                grid-area: 1 / 4 / 8 / 7 ;
+            }
+        }
+
+        .expositions {
+            grid-area: 7 / 1 / 13 / 7 ;
+
+            @media #{variables.$large-plus} {
+                grid-area: 1 / 7 / 8 / 10 ;
+            }
+        }
+
+        .commandes {
+            grid-area: 7 / 7 / 13 / 13 ;
+
+            @media #{variables.$large-plus} {
+                grid-area: 1 / 10 / 8 / 13 ;
+            }
+        }
+    }
+
+    .sociaux {
+        grid-area: 7 / 1 / 11 / 13 ;
+        height: 99px;
+        padding: 15px;
+        align-self: flex-end;
+       
+        @media #{variables.$medium-plus} {
+            grid-area: 9 / 9 / 10 / 13 ;
+            
+        }
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        ul {
+            display: flex;
+            margin: 10px;
+
+            li {
+                list-style-type: none;
+                margin: 0 30px 20px 0;
+                height: 40px;
+                width: 40px;
+
+                a {
+                    color: variables.$couleur_bleu_fonce;
+
+                    i {
+                        height: 40px;
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    .politique {
+        grid-area: 11 / 1 / 12 / 13 ;
+        padding: 15px;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            li {
+                font-size: .8rem;
+                margin: 10px;
+                display: flex;
+
+                a {
+                    color: variables.$couleur_bleu_fonce;
+                }
+            }
+        }
+    }
+
+    .petits_caracteres {
+        grid-area: 12 / 1 / 13 / 13 ;
+        height: 95px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+
+        p {
+            font-size: .7rem;
+        }
+    }
+}

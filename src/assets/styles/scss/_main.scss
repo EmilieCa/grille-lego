@@ -1,0 +1,431 @@
+@use 'variables';
+@use 'fonts';
+@use 'placeholders';
+
+main {
+    grid-area: 2 / 1 / 3 / 13 ;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, auto);
+
+    section {
+
+        h2 {
+            font-size: 1.5rem;
+            font-family: 'Railway';
+            font-weight: bold;
+            padding-left: 25px;
+        }
+
+        // div {
+        //     h2 {
+        //         padding-left: 25px;
+        //     }
+        // }
+
+        h3 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: .9rem;
+            font-family: 'Railway';
+            font-weight: bold;
+        }
+    }
+
+    .banniere_image {
+        grid-area: 1 / 1 / 2 / 13 ;
+        background-color: variables.$couleur_rouge_vin;
+        
+        div {
+            overflow: hidden;
+
+            figure {
+                margin: 0;
+                padding: 0;
+                height: 672px;
+                position: relative;
+                
+
+                @media #{variables.$medium-plus} {
+                    height: 308px;
+                }
+
+                .imageBackground {
+                    height: 500px;
+                    overflow: hidden;
+
+                    @media #{variables.$medium-plus} {
+                        height: 308px;
+                    }
+
+                    img {
+                        height: 500px;
+                        float: right;
+
+                        @media #{variables.$medium-plus} {
+                            height: 308px;
+                        }
+                    }
+                }
+
+                figcaption {
+                    height: 172px;
+                    // padding: 10px;
+                    margin: 5px;
+                    color: #d5ccc0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    @media #{variables.$medium-plus} {
+                        position: absolute;
+                        top: 50px;
+                        left: 15px;
+                        // max-width: 300px;
+                        height: 230px;
+                        align-items: flex-start;
+                    }
+
+                    h1 {
+                        font-family: 'Shadows';
+                    }
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    div {
+                        
+                        button {
+                            background-color: variables.$couleur_beige;
+                            margin-left: 5px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .menuMain {
+        grid-area: 2 / 1 / 3 / 13 ;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+
+            li {
+                background-color: variables.$couleur_bleu_fonce;
+                font-size: .8rem;
+                list-style-type: none;
+                height: 85px;
+                width: 85px;
+                margin: 5px 10px;
+                border-radius: 7px;
+                display: flex;
+                justify-content: center;
+                
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    // @extend %reset-link;
+                    color: variables.$couleur_bleu_pale;
+                }
+            }
+        }
+    }
+
+    .carousel_1 {
+        grid-area: 3 / 1 / 4 / 13 ;
+        
+        div {
+            overflow: hidden;
+
+            h2 {
+                margin: 10px 0;
+                padding-left: 30px;
+            }
+
+            div {
+                display: flex;
+                overflow: auto; 
+                white-space: nowrap; 
+               
+                figure {
+                    height: 530px;
+                    width: 375px;
+                    margin: 5px 15px;
+
+                    @media #{variables.$medium-plus} {
+                            height: 516px;
+                            width: 317;
+                    }
+    
+                    .image_background {
+                        background-color: variables.$couleur_orange;
+                        height: 373px;
+                        width: 373px;
+                        overflow: hidden;
+                        display: flex;
+                        justify-content: center;
+
+                        @media #{variables.$medium-plus} {
+                                height: 315px;
+                                width: 315px;
+                        }
+
+                        img {
+                            height: 100%;
+                            width: auto;
+                        }
+                    }
+
+                    figcaption {
+
+                        button {
+                            background-color: variables.$couleur_gris_fonce;
+                            color: variables.$couleur_blanc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .collection_poupees {
+        grid-area: 4 / 1 / 5 / 13 ;
+        margin-top: 25px;
+
+        div {
+
+            figure {
+                height: 427px;
+                width: 460px;
+                padding: 0;
+                margin: 0;
+
+                @media #{variables.$medium-plus} {
+                    height: 394px;
+                    width: 400px;
+                }
+
+                .imageBackground {
+                    height: 319px;
+                    width: 460px;
+                    background-color: variables.$couleur_vert_pale;
+                    display: flex;
+                    justify-content: center;
+                    overflow: hidden;
+
+                    @media #{variables.$medium-plus} {
+                        height: 287px;
+                        width: 400px;
+                    }
+
+                    img {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+
+                figcaption {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    button {
+                        background-color: variables.$couleur_vert_pale;
+                    }
+                }
+            }
+        }
+    }
+
+    .filles_amazon {
+        grid-area: 5 / 1 / 6 / 13 ;
+
+        h2 {
+            margin: 15px 0;
+        }
+
+        div {
+
+            figure {
+                height:513px;
+                width: 460px;
+                padding: 0;
+                margin: 0;
+                
+                @media #{variables.$medium-plus} {
+                    height: 336px;
+                    width: 305px;
+                    margin: 25px 0
+                }
+
+                .imageBackground {
+                    height: 319px;
+                    width: 460px;
+                    background-color: variables.$couleur_bleu_fonce;
+                    display: flex;
+                    justify-content: center;
+                    overflow: hidden;
+
+                    @media #{variables.$medium-plus} {
+                        height: 211px;
+                        width: 305px;
+                    }
+
+                    img {
+                        height: 100%;
+                        width: auto;
+                    }
+                }
+
+                figcaption {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    button {
+                        background-color: variables.$couleur_bleu_fonce;
+                        color: variables.$couleur_blanc;
+                    }
+                }
+            }
+        }
+    }
+
+    .alice {
+        grid-area: 6 / 1 / 7 / 13 ;
+        
+        @media #{variables.$medium-plus} {
+            margin-top: 100px;
+        }
+
+        div {
+
+            figure {
+                background-color: variables.$couleur_gris_pale;
+                margin: 0;
+                padding: 0;
+                color: variables.$couleur_blanc;
+                position: relative;
+
+                .imageBackground {
+                    background-color: variables.$couleur_gris_pale;
+                    overflow: hidden;
+                    height: 220px;
+                    display: flex;
+                    justify-content: center;
+
+                    @media #{variables.$medium-plus} {
+                        height: 188px; 
+                        justify-content: flex-end;
+                    }
+
+                    img {
+                        height: 220px;
+    
+                        @media #{variables.$medium-plus} {
+                            height: 188px;
+                        }
+                    }
+                }
+
+                figcaption {
+                    background-color: variables.$couleur_gris_pale;
+                    color: variables.$couleur_noir;
+                    height: 125px;
+                    padding: 10px 30px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    
+                    @media #{variables.$medium-plus} {
+                        position: absolute;
+                        top: 30px;
+                        background-color: none;
+                        align-items: flex-start;
+                    }
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    div {
+                        
+                        button {
+                            background-color: variables.$couleur_gris_fonce;
+                            color: variables.$couleur_blanc;
+                            margin-left: 5px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel_2 {
+        grid-area: 7 / 1 / 8 / 13 ;
+        margin: 20px 0;
+
+        div {
+
+            h2 {
+                margin: 10px 0;
+                padding-left: 30px;
+            }
+
+           div {
+                display: flex;
+                overflow: auto; 
+                white-space: nowrap; 
+               
+                figure {
+                    height: 500px;
+                    width: 313px;
+                    margin: 5px 15px;
+
+                    @media #{variables.$medium-plus} {
+                            height: 513px;
+                            width: 290px;
+                    }
+   
+                    .image_background {
+                        background-color: variables.$couleur_gris_pale;
+                        height: 313px;
+                        width: 313px;
+                        display: flex;
+                        justify-content: center;
+
+                        @media #{variables.$medium-plus} {
+                                height: 290px;
+                                width: 290px;
+                        }
+
+                        img {
+                            height: 100%;
+                            width: auto;
+                        }
+                    }
+
+                    figcaption {
+
+                        button {
+                            background-color: variables.$couleur_gris_pale;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+@use 'variables';
+
+// RESET
+html, body, header, nav, ul, li, main, section, footer, h1, h2, h3, h4, h5, div, figure, img, figcaption, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    outline: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+html {
+    font-size: 100%;
+    
+    @media #{variables.$medium-plus} {
+        font-size: 110%;
+    }
+
+    @media #{variables.$large-plus} {
+        font-size: 120%;
+    }
+
+    body {
+        background-color: variables.$couleur_blanc;
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(3, auto);
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 1em;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #dee5e7;
+    border-radius: 100vw;
+    margin-block: .5em;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: variables.$couleur_bleu_fonce;
+    border: .15em solid #dee5e7;
+    border-radius: 100vw;
+  }
+  
+  @supports (scrollbar-color: red blue) {
+    * {
+      scrollbar-color:  variables.$couleur_bleu_fonce #dee5e7;
+      scrollbar-width: thin;
+    }
+  }
+

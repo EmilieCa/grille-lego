@@ -1,0 +1,28 @@
+@use 'fonts';
+
+// COULEURS
+$couleur_rouge_vin: #661a1c;
+$couleur_orange: #d36c0cd8;
+$couleur_beige: #d5ccc0;
+
+$couleur_vert_pale: #99A997;
+$couleur_bleu_pale: #dff1f1;
+$couleur_bleu_fonce: #416d88;
+
+$couleur_gris_pale : #a3a194;
+$couleur_gris_fonce: #5f5858;
+$couleur_blanc: #f8f8f8;
+$couleur_noir: #080808;
+
+//POLICES
+$shadows-font: 'Shadows';
+$railway-font: 'Railway';
+
+//DIMENSIONS
+$small_size: 600px;
+$medium_size: 900px;
+$large_size: 1200px;
+
+$small-plus: '(min-width: #{$small-size})';
+$medium-plus: '(min-width: #{$medium-size})';
+$large-plus: '(min-width: #{$large-size})';

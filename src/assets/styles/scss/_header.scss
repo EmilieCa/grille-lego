@@ -1,0 +1,257 @@
+@use 'variables';
+@use 'placeholders';
+
+header {
+    grid-area: 1 / 1 / 2 / 13 ;
+
+    a {
+        color: variables.$couleur_rouge_vin;
+    }
+
+    .menu_mobile {
+        display: block;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 50px 50px;
+
+        span {
+            color: #d5ccc0;
+        }
+
+        @media #{variables.$medium-plus} {
+            display: none;
+        }
+
+        .banniere_haut {
+            grid-area: 1 / 1 / 2 / 13 ;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            align-items: center;
+            
+            .banniere_haut_carousel {
+                background-color: variables.$couleur_orange;
+                color: variables.$couleur_noir;
+                // font-weight: 600;
+                grid-area: 1 / 1 / 2 / 12 ;
+                text-align: center;
+            }
+
+            a {
+                grid-area: 1 / 12 / 2 / 13 ;
+                display: flex;
+                justify-content: end;
+            }
+        }
+
+        nav {
+            grid-area: 2 / 1 / 3 / 13 ;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            justify-content: center;
+            align-items: center;
+
+            button {
+                grid-area: 1 / 1 / 2 / 2 ;
+                background-color: #f8f8f8;
+                margin: 0;
+            }
+
+            .offcanvas {
+
+                .offcanvas-header {
+                    h2 {
+                        font-family: 'Shadows';
+                    }
+                }
+                
+                .offcanvas-body {
+
+                    .dropdown {
+                        display: flex;
+                        flex-direction: column;
+
+                        button {
+                            margin-bottom: 10px;
+                            width: 90%;
+                            align-self: center;
+                            background-color: variables.$couleur_rouge_vin;
+                            color: variables.$couleur_blanc;  
+                        }
+
+                        ul {
+
+                            li {
+                                margin-top: 5px;
+                            }
+                        }
+
+                        div {
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 25px;
+
+                            a {
+                                display: flex;
+                                width: 100%;
+
+                                span {
+                                    margin-left: 10px;
+                                    color: #661a1c;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            a {
+                grid-area: 1 / 2 / 2 / 3 ;
+                height: 40px;
+                width: 40px;
+                margin-left: 1
+                5px;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .nav_utilisateur {
+                grid-area: 1 / 9 / 2 / 13 ;
+                display: flex;
+
+                button {
+                    margin: 0 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                a {
+                    margin: 0 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .menu_bureau {
+        display: none;
+
+        @media #{variables.$medium-plus} {
+            display: block;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 50px 50px;
+        }
+
+        .nav_utilitaire {
+            grid-area: 1 / 1 / 2 / 13 ;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            align-items: center;
+
+            button {
+                grid-area: 1 / 1 / 2 / 4 ;
+                // margin-bottom: 5px;
+                margin-top: 0;
+                width: 90%;
+                height: 70%;
+                background-color: variables.$couleur_rouge_vin;
+                color: variables.$couleur_beige;
+            }
+
+            .nav_utilitaire_banniere {
+                grid-area: 1 / 4 / 2 / 10 ;
+                align-self: center;
+                height: 30px;
+                background-color: variables.$couleur_orange;
+                color: variables.$couleur_noir;
+                text-align: center;
+
+                // .banniere_haut_carousel {
+
+                //     .banniere_bonjour_maude_bureau {
+                //         display: flex;
+                //     }
+                // }
+
+                span {
+                    color: #d5ccc0;
+                }
+            }
+
+            .nav_utilitaire_compte {
+                grid-area: 1 / 10 / 2 / 13 ;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+
+                a {
+                    i {
+                        margin: 0 10px;
+                    }
+                }
+    
+            }
+        }
+
+        nav {
+            grid-area: 2 / 1 / 3 / 10 ;
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(12, 1fr);
+
+            a {
+                height: 40px;
+                width: 40px;
+                grid-area: 1 / 1 / 2 / 2 ;
+                // display: flex;
+
+                img {
+                    width: 100%;
+                    justify-self: center;
+                }
+            }
+
+            ul {
+                grid-area: 1 / 4 / 2 / 12 ;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                li {
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        .nav_interactions {
+            grid-area: 2 / 10 / 3 / 13 ;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            button {
+                // background-color: rgb(202, 197, 197);
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+            }
+
+            a {
+                display: flex;            
+            }
+            
+            i {
+                margin: 0 10px;
+            }
+        }
+    }
+}
