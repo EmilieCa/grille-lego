@@ -31,7 +31,6 @@ header {
             .banniere_haut_carousel {
                 background-color: variables.$couleur_orange;
                 color: variables.$couleur_noir;
-                // font-weight: 600;
                 grid-area: 1 / 1 / 2 / 12 ;
                 text-align: center;
             }
@@ -155,7 +154,6 @@ header {
 
             button {
                 grid-area: 1 / 1 / 2 / 4 ;
-                // margin-bottom: 5px;
                 margin-top: 0;
                 width: 90%;
                 height: 70%;
@@ -170,13 +168,6 @@ header {
                 background-color: variables.$couleur_orange;
                 color: variables.$couleur_noir;
                 text-align: center;
-
-                // .banniere_haut_carousel {
-
-                //     .banniere_bonjour_maude_bureau {
-                //         display: flex;
-                //     }
-                // }
 
                 span {
                     color: #d5ccc0;
@@ -208,7 +199,6 @@ header {
                 height: 40px;
                 width: 40px;
                 grid-area: 1 / 1 / 2 / 2 ;
-                // display: flex;
 
                 img {
                     width: 100%;
@@ -235,7 +225,6 @@ header {
             align-items: center;
 
             button {
-                // background-color: rgb(202, 197, 197);
                 height: 40px;
                 width: 40px;
                 border-radius: 50%;

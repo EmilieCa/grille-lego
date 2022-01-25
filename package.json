@@ -1,5 +1,5 @@
 {
-  "name": "tp2_realisation-web",
+  "name": "grille-lego",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,9 +10,6 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.15.5",
-    "@popperjs/core": "^2.10.2",
-    "bootstrap": "^5.1.2",
-    "bootstrap-icons": "^1.7.2",
     "browser-sync": "^2.27.5",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -23,5 +20,8 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "gulp-clean-css": "^4.3.0"
   }
 }

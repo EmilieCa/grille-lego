@@ -1,20 +1,5 @@
 @use 'variables';
 
-// Je sais que des mixins et placeholders sont très pratique pour des gros projets, mais pour celui là, c'était beaucoup plus rapide de faire mes reset par le ficher _bases (moins de code :) )
-
-// %reset_button {
-//     outline: none;
-//     padding: 5px;
-//     margin-top: 5px;
-//     border: none;
-//     border-radius: 5px;
-// }
-
-// %reset-list {
-//     list-style-type: none;
-//     outline: none;
-// }
-
 %reset-link {
     outline: none;
     text-decoration: none;
